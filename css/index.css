@@ -1,6 +1,7 @@
 body{
     margin:0;
     font-family:Italianno,sans-serif;
+    background-color:rgb(66, 66, 66);
 }
 
 html{
@@ -13,7 +14,7 @@ header{
     position:fixed;
     width:100%;
     top:0;
-    z-index:20;
+    z-index:25;
     transition:.3s;
     transition-timing-function:ease-out;
 }
@@ -120,6 +121,7 @@ header{
     background-color:transparent;
     border:none;
     cursor:pointer;
+    color:white;
 }
 
 .navlink-dots:hover .responsive-menu{
@@ -167,7 +169,7 @@ main{
     position:fixed;
     top:0;
     right:0;
-    z-index:25;
+    z-index:30;
     color:white;
     width:0%;
     height:100%;
@@ -412,11 +414,15 @@ footer{
 .slide-gallery-section{
     position:relative;
     z-index:18;
-    height:200vh;
+    height:100vh;
 }
 
 .first-viewport{
-    height:50%;
+    height:100%;
+}
+
+.floating-viewport{
+    padding:5rem 0;
 }
 
 .slides{
@@ -426,6 +432,7 @@ footer{
     display:none;
     height:100%;
     width:100%;
+    z-index:15;
 }
 
 .slides img{
@@ -437,7 +444,6 @@ footer{
 .slide-des{
     position:absolute;
     inset:0;
-    background-color:rgba(0,0,0,0.7);
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -488,30 +494,339 @@ footer{
 }
 
 
-.dots-container{
+.items-cards-container{
+    width:98%;
+    margin:0 auto;
+    display:grid;
+    justify-content:space-around;
+    grid-template-columns:90%;
+    row-gap:2rem;
+}
+
+.item-card{
+    border-radius:1rem;
+    box-shadow:4px 6px 10px black;
+    color:white;
+    padding-bottom:2rem;
+}
+
+.item-card-des{
     text-align:center;
 }
 
-.dots-container .dots{
+
+.item-card-des h2{
+    padding-top:15rem;
+    font-size:2.5rem;
+    margin-bottom:0;
+}
+
+.item-card-des p{
+    margin-top:0;
+    font-size:2rem;
+}
+
+.item-card-des .deco-line{
     display:inline-block;
-    width:30px;
-    height:30px;
-    background-color:lightgray;
-    border-radius:50%;
+
+}
+
+.item-card-des .deco-line{
+    height:4px;
+    width:25%;
+    background-color:brown;
+}
+
+.item-card-btn-container{
+    border:1px solid white;
+    width:50%;
+    margin:0 auto;
+    text-align:left;
+    position:relative;
+    border-radius:1rem;
+    overflow:hidden;
+}
+
+.item-card-des button{
+    width:100%;
+    margin:0 auto;
+    padding:.8rem 0;
     cursor:pointer;
+    border-radius:1rem;
+    border:none;
+    color:brown;
+    background-color:white;
 }
 
-.dots-container .open-slide{
-    background-color:rgba(0,0,0,0.7);
+.item-card-des .flash-span{
+    background-color:brown;
+    width:0%;
+    transition:.2s;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-radius:1rem;
+    overflow:hidden;
+    text-align:center;
 }
 
-.dots-container .dots:hover{
-    background-color:rgba(0,0,0,0.8);
+.item-card-des a{
+    color:white;
+    text-decoration:none;
+}
+
+.item-card-btn-container:hover .flash-span{
+    color:red;
+    width:100%;
+}
+
+.item-card{
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    transition:.5s;
+
+}
+
+.item-card:hover{
+    transform:rotateX(20deg);
+    box-shadow:10px 15px 10px black;
+}
+
+.item-card-1{
+    background-image:url(https://media.istockphoto.com/id/1467739359/photo/cup-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=4PdlSeLCTxVvPefrUtGupLeRWhi8y_knfDcRx4-2QXI=);
+}
+
+.item-card-2{
+    background-image:url(https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D)
+}
+
+.item-card-3{
+    background-image:url(https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FwcHVjaW5vfGVufDB8fDB8fHww)
+}
+
+.item-card-4{
+    background-image:url(https://images.unsplash.com/photo-1661529548674-8dae0330fe04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90JTIwY2hvY29sYXRlfGVufDB8fDB8fHww)
+}
+
+.store-message-content{
+    width:98%;
+    margin:0 auto;
+    text-align:center;
+    color:white;
+    font-family:Italiana;
+    padding-bottom:5rem;
+}
+
+.store-message-cup img{
+    width:50%;
+}
+
+.membership-info h2{
+    font-size:2rem;
+}
+
+
+.membership-info h3{
+    font-size:1.5rem;
+}
+
+.membership-info .join-now-btn{
+    padding:1rem 2rem;
+    background-color:brown;
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:2rem;
+    font-weight:bolder;
+    animation-name:join-now-animation;
+    animation-iteration-count:infinite;
+    animation-duration:1s;
+}
+
+.unique-des-section{
+    color:white;
+    background-image:url(https://media.istockphoto.com/id/2128811807/photo/roasted-coffee-beans-with-filter-holder.webp?a=1&b=1&s=612x612&w=0&k=20&c=pt42Re5_MAe-lzhl0lCeyuxxfws3zxZuD0L0bJRmhQw=);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    padding:.5rem 0 5rem;
+}
+
+.unique-des-container{
+    width:98%;
+    margin:0 auto;
+    font-family:Italiana;
+}
+
+.unique-secret h2{
+    font-size:2rem;
+}
+
+.unique-secret p{
+    font-size:1.2rem;
+}
+
+.unique-secret-flexer{
+    display:flex;
+    flex-direction:column;
+    row-gap:2rem;
+}
+
+
+.unique-secret-image-cont img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:1rem;
+    filter:blur(1px)
+}
+
+.unique-secret-image-cont{
+    height:400px;
+}
+
+.unique-secret-points{
+    display:grid;
+}
+
+.unique-flex-point{
+    display:flex;
+    align-items:center;
+}
+
+.unique-flex-left{
+    width:30%;
+}
+
+.unique-flex-left img{
+    width:100%;
+    height:80px;
+}
+
+.unique-flex-right{
+    width:70%;
+}
+
+.unique-flex-right h3{
+    font-size:1.1rem;
+    margin:0;
+}
+.unique-flex-right p{
+    margin:.1rem;
+}
+
+.unique-secret{
+    animation:unique-secret;
+    animation-timeline:view();
+    animation-range-start:cover;
+    animation-range-end:contain;
+}
+
+.unique-image{
+    animation:coffe-cup-anima linear forwards;
+    animation-timeline:view();
+    animation-range-start:cover;
+    animation-range-end:contain;
+}
+
+.experience-section{
+    padding:4rem 0;
+    color:white;
+    font-family:Italiana;
+}
+
+.experience-flexer{
+    display:flex;
+    flex-direction:column;
+    width:98%;
+    margin:0 auto;
+    row-gap:10px;
+}
+
+.experience-flexer div{
+    background-color:black;
+    padding:0 1rem;
+    box-sizing:border-box;
+    transform:skewX(20deg);
+    margin:0 auto;
+    overflow:hidden;
+    width:95%;
+    opacity:0;
+    animation:experience-animation linear forwards;
+    animation-timing-function:ease-in;
+    animation-delay:5s;
+    animation-timeline:view();
+    animation-range-start:cover;
+    animation-range-end:contain;
+}
+
+.cookies-section{
+    background-color:black;
+    position:fixed;
+    width:100%;
+    left:0;
+    bottom:0;
+    color:white;
+    font-family:sans-serif;
+    z-index:20;
+    padding-bottom:2rem;
+    display:none;
+    animation-name:cookies-section;
+    animation-duration:2s;
+}
+
+.cookies-div{
+    width:98%;
+    margin:0 auto;
+}
+
+.cookies-section button{
+    padding:.5rem 2rem;
+    border:none;
+    cursor:pointer;
+    border-radius:2rem;
+    color:white;
+    font-weight:bolder;
+}
+
+#accept-cookies-btn{
+    background-color:green;
+}
+
+#decline-cookies-btn{
+    background-color:red;
+}
+
+@keyframes cookies-section{
+    from{bottom:-100px}
+    to{bottom:0}
+}
+
+@keyframes coffe-cup-anima{
+    0%{opacity:0;transform:scale(.5,.5)}
+    80%,100%{opacity:1;transform:scale(1,1)}
+}
+
+@keyframes unique-secret{
+    0%{transform:translateY(200px);opacity:0}
+    50%{opacity:.5}
+    80%,100%{transform:translateY(0);opacity:1}
 }
 
 @keyframes slide1-animation{
     from{left:-100%;}
     to{left:0}
+}
+
+@keyframes experience-animation{
+    0%{transform:skewX(-20deg);opacity:0;}
+    50%{opacity:.5}
+    100%{transform:skewX(0deg);opacity:1}
 }
 
 @keyframes slide2-animation{
@@ -535,7 +850,75 @@ footer{
     to{transform:scale(1,1)}
 }
 
+@keyframes join-now-animation{
+    from{box-shadow:0px 0px 0px 0px transparent;transform:scale(.7,.7)}
+    to{box-shadow:10px 5px 10px 5px rgb(41, 41, 41);transform:scale(1,1)}
+}
+
+@media screen and (min-width:580px){
+ 
+    .items-cards-container{
+        grid-template-columns:49% 49%;
+    }
+
+    .store-message-content img{
+        width:15%;
+    }
+
+}
+
+@media screen and (min-width:790px){
+
+
+    .experience-flexer{
+        flex-direction:row;
+        row-gap:0;
+        justify-content:space-between;
+    }
+
+    .experience-flexer div{
+        width:20%;
+    }
+
+    .unique-secret-flexer{
+        flex-direction:row;
+        justify-content:space-between;
+        row-gap:0;
+    }
+
+    .unique-secret-image-cont{
+        width:40%;
+    }
+    .unique-secret-points{
+        width:55%;
+        grid-template-columns:49% 49%;
+        justify-content:space-between;
+    }
+}
+
 @media screen and (min-width:890px){
+
+
+    
+    .items-cards-container{
+        grid-template-columns:24% 24% 24% 24%;
+    }
+
+    .store-message-content{
+        padding:27rem 0 3rem 0;
+        box-sizing:border-box;
+    }
+
+    .store-message-content img{
+        width:20%;
+    }
+
+    .floating-viewport{
+        position:absolute;
+        width:100%;
+        top:70%;
+        z-index:18;
+    }
 
     #mobile-slide{
         display:none;
@@ -556,6 +939,10 @@ footer{
 }
 
 @media screen and (min-width:990px){
+
+    .store-message-content img{
+        width:10%;
+    }
 
     .slide-des div{
         width:30%;
