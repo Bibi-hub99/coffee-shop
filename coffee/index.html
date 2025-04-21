@@ -13,10 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -77,61 +73,7 @@
             </div>
         </section>
 
-        <section class="slide-gallery-section">
-            <div class="first-viewport">
 
-                <div class="slides">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLcZ2KQcoP0evOgz9TLy2yS2vw96AwOY8gsA&s" alt="a-white-cup-of-hot-strong-black-coffee" title="a-white-cup-of-hot-strong-black-coffee">
-                    <div class="slide-des slide-des-1 left-animations">
-                        <div>
-                            <h2>Just image text</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slides">
-                    <img src="https://plus.unsplash.com/premium_photo-1674327105074-46dd8319164b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8fDB8fHww" alt="a cup of cappucino on a sauce-pan with a spoon" title="a cup of cappucino on a sauce-pan with a spoon">
-                    <div class="slide-des slide-des-2 left-animations">
-                        <div>
-                            <h2>Just image text</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slides">
-                    <img src="https://plus.unsplash.com/premium_photo-1690214491960-d447e38d0bd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D" alt="a cake on top of a brown wooden table" title="a cake on top of a brown wooden table">
-                    <div class="slide-des slide-des-3 left-animations">
-                        <div>
-                            <h2>Just image text</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slides">
-                    <img src="https://plus.unsplash.com/premium_photo-1715514974066-8be810fbfa12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2NvbmVzfGVufDB8fDB8fHww" alt="a handful of baked scones in a blue plate on a table" title="a handful of baked scones in a blue plate on a table">
-                    <div class="slide-des slide-des-4 right-animations">
-                        <div>
-                            <h2>Just image text</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slides">
-                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzc2VydHxlbnwwfHwwfHx8MA%3D%3D">
-                    <div class="slide-des slide-des-5 right-animations">
-                        <div>
-                            <h2>Just image text</h2>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section>
-
-        </section>
 
 
     </main>
@@ -255,31 +197,6 @@
             }
             previousPos = currentPos;
         }
-
-        let slideIndex = 0;
-
-        function showSlide(){
-
-            let slides,dots,i;
-            slides = document.getElementsByClassName("slides")
-            
-            for(i=0;i < slides.length;i++){
-                slides[i].style.display = 'none'
-            }
-
-            slideIndex++
-
-            if(slideIndex > slides.length){
-                slideIndex = 1
-            }
-
-            slides[slideIndex-1].style.display = 'block'
-            setTimeout(showSlide,10000)
-        }
-
-        showSlide()
-
-
 
     </script>
     <script src="./js/index.js"></script>

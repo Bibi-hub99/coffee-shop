@@ -13,7 +13,7 @@ header{
     position:fixed;
     width:100%;
     top:0;
-    z-index:10%;
+    z-index:20;
     transition:.3s;
     transition-timing-function:ease-out;
 }
@@ -81,6 +81,7 @@ header{
 
 .navlink-container .active{
     background-color:black;
+    border:1px solid white;
 }
 
 .navlink-container .navlink:hover:not(.active){
@@ -166,7 +167,7 @@ main{
     position:fixed;
     top:0;
     right:0;
-    z-index:11;
+    z-index:25;
     color:white;
     width:0%;
     height:100%;
@@ -408,6 +409,132 @@ footer{
     margin-left:auto;
 }
 
+.slide-gallery-section{
+    position:relative;
+    z-index:18;
+    height:200vh;
+}
+
+.first-viewport{
+    height:50%;
+}
+
+.slides{
+    position:relative;
+    font-family:Italiana;
+    color:white;
+    display:none;
+    height:100%;
+    width:100%;
+}
+
+.slides img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.slide-des{
+    position:absolute;
+    inset:0;
+    background-color:rgba(0,0,0,0.7);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.slide-des div{
+    background-color:rgb(88, 87, 87);
+    border-radius:1rem;
+    position:relative;
+    width:50%;
+    padding:2rem 1rem;
+    margin-left:10%;
+    box-sizing:border-box;
+}
+
+.slide-des-1 div{
+    animation-name:slide1-animation;
+    animation-duration:2s;
+}
+
+.slide-des-2 div{
+    animation-name:slide2-animation;
+    animation-duration:2s;
+}
+
+.slide-des-3 div{
+    animation-name:slide-3-animation;
+    animation-duration:2s;
+}
+
+.right-animations{
+    align-items:flex-end;
+}
+
+.right-animations div{
+    margin-left:0;
+    margin-right:10%;
+}
+
+.slide-des-4 div{
+    animation-name:slide-4-animation;
+    animation-duration:2s;
+}
+
+.slide-des-5 div{
+    animation-name:slide-5-animation;
+    animation-duration:2s;
+}
+
+
+.dots-container{
+    text-align:center;
+}
+
+.dots-container .dots{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background-color:lightgray;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.dots-container .open-slide{
+    background-color:rgba(0,0,0,0.7);
+}
+
+.dots-container .dots:hover{
+    background-color:rgba(0,0,0,0.8);
+}
+
+@keyframes slide1-animation{
+    from{left:-100%;}
+    to{left:0}
+}
+
+@keyframes slide2-animation{
+    from{top:-50%}
+    to{top:0}
+}
+
+@keyframes slide-3-animation{
+    from{bottom:-50%}
+    to{bottom:0}
+}
+
+@keyframes slide-4-animation{
+    0%{opacity:0;transform:rotateX(180deg);}
+    50%{opacity:1}
+    100%{transform:rotateX(0deg)}
+}
+
+@keyframes slide-5-animation{
+    from{transform:scale(.5,.5)}
+    to{transform:scale(1,1)}
+}
+
 @media screen and (min-width:890px){
 
     #mobile-slide{
@@ -430,6 +557,10 @@ footer{
 
 @media screen and (min-width:990px){
 
+    .slide-des div{
+        width:30%;
+    }
+
     .navlink-menu-cont{
         display:block
     }
@@ -449,6 +580,7 @@ footer{
 }
 
 @media screen and (min-width:1100px){
+
 
 
 
