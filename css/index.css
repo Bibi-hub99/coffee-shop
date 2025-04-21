@@ -1,0 +1,488 @@
+body{
+    margin:0;
+    font-family:Italianno,sans-serif;
+}
+
+html{
+    color:white;
+}
+
+header{
+    background-color:rgba(0,0,0,0.8);
+    margin:0 auto;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10%;
+    transition:.3s;
+    transition-timing-function:ease-out;
+}
+
+.navbar{
+    width:95%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+}
+
+.navbar h1{
+    margin:0;
+    padding:1rem 0;
+}
+
+.navbar h1::after{
+    content:"☕"
+}
+
+.logo-text{
+    width:auto;
+}
+
+.middle-nav{
+    display:none;
+    width:80%;
+}
+
+.middle-nav a{
+    text-decoration:none;
+    color:white;
+}
+
+.right-nav{
+    margin-left:auto;
+    display:block;
+}
+
+.navlink-menu-cont,.navlink-blog-cont,.navlink-shop-cont,.navlink-faq-cont,.navlink-contact-cont{
+    display:none;
+}
+
+.navlink-about-cont{
+    position:relative;
+}
+
+.navlink-container{
+    width:70%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.navlink-container .navlink{
+    width:30%;
+    text-align:center;
+    letter-spacing:5px;
+    font-size:1.2rem;
+    font-weight:bolder;
+    padding: 1rem 0;
+    border-radius:.2rem;
+    cursor:pointer;
+}
+
+.navlink-container .active{
+    background-color:black;
+}
+
+.navlink-container .navlink:hover:not(.active){
+    background-color:brown;
+}
+
+
+.navlink-dots{
+    font-size:1rem;
+    position:relative;
+}
+
+.responsive-menu{
+    background-color:brown;
+    position:absolute;
+    left:0;
+    right:0;
+    border-radius:.2rem;
+    display:none;
+}
+
+.responsive-menu a{
+    display:block;
+    padding: 1rem 0 !important;
+    margin:.5rem;
+    border-radius:.5rem;
+}
+
+.responsive-menu a:hover:not(.active){
+    background-color:rgb(138, 61, 61);
+}
+
+.navlink-dot-menu{
+    width:100%;
+    font-size:1.2rem;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+
+.navlink-dots:hover .responsive-menu{
+    display:block;
+}
+
+
+.social-link-container{
+    width:30%;
+    display:flex;
+    margin-left:auto;
+    justify-content:space-evenly;
+}
+
+.social-link-container a{
+    display:block;
+    width:30%;
+    text-align:center;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-radius:.2rem;
+}
+
+.social-link-container a:hover{
+    background-color:brown;
+}
+
+.bars-btn{
+    background-color:rgb(194, 71, 71);
+    border:none;
+    padding:.3rem 1rem;
+    font-size:1.5rem;
+    border-radius:.5rem;
+    color:white;
+    cursor:pointer;
+}
+
+main{
+    color:black;
+}
+
+#mobile-slide{
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:11;
+    color:white;
+    width:0%;
+    height:100%;
+    transition-property:width;
+    transition-duration:.5s;
+    transition-timing-function:ease-in-out;
+    background-image:url(https://images.unsplash.com/photo-1527964275784-5ce8ddab3d8e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D)
+}
+
+.mobile-content{
+    background-color:rgba(0,0,0,0.8);
+    position:relative;
+    height:100%;
+    width:100%;
+    top:0;
+    padding-top:3rem;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.mobile-content a{
+    display:block;
+    padding:.5rem .5rem;
+    color:white;
+    font-size:2rem;
+    text-decoration-line:none;
+    margin:.5rem auto 0;
+    width:90%;
+    border-radius:1rem;
+    transition:.3s;
+}
+
+.mobile-content .current-link{
+    background-color:brown;
+    color:black;
+}
+
+.mobile-content a:hover:not(.current-link){
+    background-color:rgba(0,0,0,1);
+    text-indent:4rem;
+}
+
+.close-mobile-slide{
+    background-color:transparent;
+    border:none;
+    color:white;
+    position:absolute;
+    top:1rem;
+    font-size:1.5rem;
+    transition:transform .2s;
+    cursor:pointer;
+}
+
+.close-mobile-slide:hover{
+    transform:rotateZ(180deg);
+}
+
+footer{
+    background-image:url(https://media.istockphoto.com/id/2148453708/photo/coffee-shop-owner-talking-to-employee.webp?a=1&b=1&s=612x612&w=0&k=20&c=4AIbu-R5YbATL8EQrIg1dO-qUT92CnKecXcEVSim9NM=);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.footer-flex{
+    width:95%;
+    margin:0 auto;
+}
+
+.footer-div{
+    background-color:rgba(0,0,0,0.8);
+    padding-bottom:1rem;
+}
+
+.footer-flex{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-flex h2{
+    margin:0;
+    padding:1rem 0;
+}
+
+.title-underline-container{
+    width:100%;
+    background-color:black;
+    height:.3rem;
+    border-radius:2rem;
+    margin-bottom:1rem;
+}
+
+.title-underline-content{
+    width:20%;
+    background-color:white;
+    height:.2rem;
+    border-radius:2rem;
+}
+
+.footer-flex-child a{
+    text-decoration:none;
+    font-size:1.5rem;
+}
+
+.footer-links a{
+    display:block;
+    color:white;
+}
+
+.fa-solid.fa-location-dot,.fa-solid.fa-envelope,.fa-solid.fa-phone,.fa-solid.fa-fax{
+    background-color:white;
+    padding:.7rem;
+    border-radius:100%;
+    margin:.1rem 0;
+    color:brown;
+}
+
+.location-link:hover .fa-solid.fa-location-dot,
+.envelope-link:hover .fa-solid.fa-envelope,
+.cell-link:hover .fa-solid.fa-phone,
+.fax-link:hover .fa-solid.fa-fax{
+    background-color:brown;
+    color:white
+}
+
+.news-links a{
+    color:white;
+}
+
+
+.news-blog-flexer{
+    display:flex;
+    height:100px;
+}
+
+
+.news-blog-img-cont{
+    width:30%;
+    position:relative;
+
+}
+
+.news-blog-img-cont .link-icon{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    background-color:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    border-radius:1rem;
+    opacity:0;
+}
+
+.news-links a:hover .link-icon{
+    opacity:1;
+}
+
+.news-blog-img-cont img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    object-position:center center;
+    border-radius:1rem;
+}
+
+.news-blog-text{
+    padding:0 0 0 .5rem;
+}
+
+.news-blog-text h3{
+    font-size:1.5rem;
+    margin-bottom:.5rem;
+}
+
+.news-blog-text p{
+    margin:0;
+    font-size:1.3rem;
+}
+
+.news-blog-date{
+    display:inline-block;
+    text-indent:.5rem;
+}
+
+.shortcut-links {
+    display:grid;
+    grid-template-columns:50% 50%;
+    gap:.2rem;
+}
+
+.shortcut-links a{
+    color:white;
+    transition:.5s;
+}
+
+.shortcut-links a:hover{
+    transform:translateX(30px)
+}
+
+.working-hours-des h4{
+    font-size:1.7rem;
+    letter-spacing:2px;
+    margin-bottom:.5rem;
+}
+
+.working-hours-flex{
+    display:flex;
+    border-bottom-style:dotted;
+    border-bottom-color:white;
+}
+
+.working-time{
+    margin-left:auto;
+}
+
+.working-hours-flex p{
+    font-size:1.5rem;
+    margin-bottom:.5rem;
+}
+
+.copyrights-container{
+    background-color:rgb(121, 119, 119);
+    padding:2rem 0;
+}
+
+.copyrights-flex{
+    width:95%;
+    margin:0 auto;
+    display:flex;
+}
+
+.copyrights-flex p{
+    margin:0;
+    font-size:1.8rem;
+}
+
+.privacy-policy{
+    margin-left:auto;
+}
+
+@media screen and (min-width:890px){
+
+    #mobile-slide{
+        display:none;
+    }
+
+    .navlink-dots{
+        display:block;
+    }
+    .middle-nav{
+        display:flex;
+    }
+    .right-nav{
+        display:none
+    }
+    .logo-text{
+        width:20%;
+    }
+}
+
+@media screen and (min-width:990px){
+
+    .navlink-menu-cont{
+        display:block
+    }
+    .navlink-container .navlink{
+        width:24%;
+    }
+    .responsive-menu .menu-link{
+        display:none;
+    }
+    .footer-flex{
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .footer-flex-child{
+        width:24%;
+    }
+}
+
+@media screen and (min-width:1100px){
+
+
+
+    .navlink-blog-cont{
+        display:block;
+    }
+    .navlink-container .navlink{
+        width:19%;
+    }
+    .responsive-menu .blog-link{
+        display:none;
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    .navlink-faq-cont{
+        display:block;
+    }
+    .navlink-container .navlink{
+        width:16%;
+    }
+    .responsive-menu .faq-link{
+        display:none;
+    }
+}
+
+@media screen and (min-width:1300px){
+
+    .navlink-contact-cont{
+        display:block;
+    }
+    .navlink-container .navlink-dots{
+        display:none;
+    }
+
+}
