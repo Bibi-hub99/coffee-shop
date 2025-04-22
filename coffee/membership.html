@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Coffee Store ☕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/membership.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Membership application</h2>
+        <form autocomplete="off">
+            <fieldset>
+                <legend>Personal information:</legend>            
+                <input type="text" name="fullName" class="common-input" id="fullName" placeholder="Full Name" minlength="1" maxlength="50" required>
+                <br>
+                <br>
+                <label for="dateOfBirth">Date Of Birth:</label>
+                <input type="date" name="dateOfBirth" class="common-input" id="dateOfBirth" min="2000-01-31" max="2007-12-31" required>
+                <br>
+                <br>
+                <input type="radio" name="gender" value="male" required id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+                <input type="radio" name="gender" value="rather_not_say" id="rather-not-say"><label for="rather-not-say">Rather not say</label>
+                <br>
+                <br>
+                <select class="common-input" required>
+                    <option value="">Are you married ?</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                </select>
+                <br>
+                <br>
+                <label>upload your id:</label>
+                <input type="file" required accept="image/*">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacts:</legend>
+                <input type="tel" name="telephone" class="common-input" placeholder="084-545-3343" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <br>
+                <input type="email" name="email" class="common-input" placeholder="example123@gmail.com" required>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Additional information:</legend>
+                <label for="numYears">Number of years:</label>
+                <input type="number" min="1" class="common-input" name="numYears" id="numYears" required>
+                <br>
+                <br>
+                <label for="special-need">Do you have special needs ?</label>
+                <input list="special-needs" id="special-need" required>
+                <datalist id="special-needs">
+                    <option value="Yes"></option>
+                    <option value="No"></option>
+                    <option value="Not Sure"></option>
+                </datalist>
+                <br>
+                <br>
+                <input type="checkbox" name="terms&conds" id="terms&conds" required><label for="terms&conds">Accept terms and conditions</label>
+                <details>
+                    <summary>Terms and conditions</summary>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos, accusamus similique modi eius sint explicabo provident. Ea optio doloribus incidunt, accusamus laborum obcaecati nihil magni! Itaque sint ex quae?
+                </details>
+                <br>
+                <br>
+                <input type="reset">
+                <input type="submit">
+            </fieldset>
+            
+        </form>
+
+    </div>
+
+</body>
+
+</html>

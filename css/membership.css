@@ -1,0 +1,50 @@
+
+body{
+    margin:0;
+}
+
+.form-container{
+    width:98%;
+    margin:1rem auto;
+}
+
+.form-container h2{
+    background-color:black;
+    margin:0;
+    color:white;
+    padding:1rem .2rem;
+}
+
+form{
+    padding-top:1rem;
+}
+
+.common-input{
+    width:100%;
+    box-sizing:border-box;
+    padding:.8rem .2rem;
+    outline:none;
+    border-radius:.5rem;
+}
+
+input[type='reset'],input[type='submit']{
+    padding:.9rem 1.9rem;
+    border:none;
+    border-radius:1rem;
+    cursor:pointer;
+    color:white;
+}
+
+input[type='reset']{
+    background-color:red;
+}
+
+input[type='submit']{
+    background-color:green;
+}
+
+@media screen and (min-width:890px){
+    .form-container{
+        width:50%;
+    }
+}
